@@ -16,7 +16,9 @@ import {createCommodityOrder, queryOrderStatus} from "@/app/actions/commodity";
 import {feeToYuan} from "@/lib/utils";
 
 export default async function Home() {
-    const resp = await fetch("https://console.d-l.ink/api/commodityGroup/list")
+    const resp = await fetch("https://console.d-l.ink/api/commodityGroup/list", {
+        cache: 'no-cache',
+    })
     let data = await resp.json()
     data = data.data as CommodityGroup[]
 
