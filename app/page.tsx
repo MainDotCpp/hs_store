@@ -21,6 +21,7 @@ export default async function Home() {
     })
     let data = await resp.json()
     data = data.data as CommodityGroup[]
+    console.log(`data:`, data)
 
     // @ts-ignore
     return (
