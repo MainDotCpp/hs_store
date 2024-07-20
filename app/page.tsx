@@ -17,7 +17,7 @@ import {feeToYuan} from "@/lib/utils";
 
 export default async function Home() {
     const resp = await fetch("https://console.d-l.ink/api/commodityGroup/list", {
-        cache: 'no-cache',
+        cache: 'no-store',
     })
     let data = await resp.json()
     data = data.data as CommodityGroup[]
